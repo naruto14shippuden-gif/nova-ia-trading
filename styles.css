@@ -249,6 +249,56 @@ overflow: hidden;
 
 }
 
+/* NOVA RAGDOLL */
+
+.hero-ragdoll {
+    width: 120px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: novaRagdollFloat 4s ease-in-out infinite;
+}
+
+.hero-ragdoll img {
+    width: 120px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(77, 159, 255, 0.30));
+    animation: novaRagdollGlow 2.8s ease-in-out infinite;
+}
+
+/* RAGDOLL FLOAT ANIMATION */
+
+@keyframes novaRagdollFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes novaRagdollGlow {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 10px rgba(77, 159, 255, 0.25));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 22px rgba(77, 159, 255, 0.65));
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-ragdoll,
+    .hero-ragdoll img {
+        animation: none;
+    }
+}
+
 .hero-title {
 
     font-size: clamp(64px, 8vw, 110px);
@@ -1360,6 +1410,14 @@ border-radius:20px;
     font-size: 22px;
 }
 
+/* Ragdoll del Navbar */
+.nav-logo .logo-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+
 .footer-logo .logo-text {
     color: var(--nova-white);
 
@@ -1508,6 +1566,16 @@ border-radius:20px;
     .secondary-button {
         width: 100%;
         max-width: 280px;
+    }
+
+    .hero-ragdoll {
+        width: 90px;
+        margin: 18px auto;
+    }
+
+    .hero-ragdoll img {
+        width: 90px;
+        height: auto;
     }
 
 }
