@@ -202,6 +202,12 @@ body {
 
 }
 
+/* Mobile Menu Button */
+
+.menu-toggle {
+    display: none;
+}
+
 /* ==========================
    Hero Section
 ========================== */
@@ -1410,6 +1416,13 @@ border-radius:20px;
     font-size: 22px;
 }
 
+.footer-logo .logo-icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
 /* Ragdoll del Navbar */
 .nav-logo .logo-icon img {
     width: 28px;
@@ -1540,6 +1553,61 @@ border-radius:20px;
         font-size: 12px;
         white-space: nowrap;
     }
+
+.menu-toggle {
+    display: block;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.navbar .nav-links {
+    display: none !important;
+}
+
+.navbar .nav-links.nav-open {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    left: 16px;
+    right: 16px;
+    padding: 20px;
+    gap: 0;
+
+    background: rgba(11, 11, 15, 0.96);
+    border: 1px solid rgba(77, 159, 255, 0.20);
+    border-radius: 16px;
+
+    backdrop-filter: blur(18px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+
+    z-index: 200;
+}
+
+.navbar .nav-links.nav-open li {
+    width: 100%;
+}
+
+.navbar .nav-links.nav-open a {
+    display: block;
+    width: 100%;
+    padding: 14px 4px;
+
+    color: #ffffff;
+    font-size: 15px;
+    text-align: left;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar .nav-links.nav-open li:last-child a {
+    border-bottom: none;
+}
 
 }
 
