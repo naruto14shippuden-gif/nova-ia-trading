@@ -40,40 +40,49 @@
 
 <body>
 
-    <header class="navbar">
+    <header class="navbar trading-navbar">
 
-        <div class="logo">
+    <div class="logo">
+        <img
+            src="assets/logos/nova-ia-trading-logo.png"
+            alt="Nova IA Trading"
+        >
+    </div>
 
-            <img src="assets/logos/nova-ia-trading-logo.png"
-                 alt="Nova IA Trading">
+    <button
+        class="trading-menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
 
-        </div>
+    <nav class="trading-nav">
 
-        <nav>
+        <ul class="trading-nav-links">
 
-            <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
+            <li>
+                <a href="index.html#services">Services</a>
+            </li>
 
-                <li>
-                    <a href="index.html#services">Services</a>
-                </li>
+            <li>
+                <a href="index.html#projects">Projects</a>
+            </li>
 
-                <li>
-                    <a href="index.html#projects">Projects</a>
-                </li>
+            <li>
+                <a href="index.html#contact">Contact</a>
+            </li>
 
-                <li>
-                    <a href="index.html#contact">Contact</a>
-                </li>
+        </ul>
 
-            </ul>
+    </nav>
 
-        </nav>
-
-    </header>
+</header>
 
 
     <main>
@@ -632,13 +641,68 @@
     </main>
 
 
-    <footer>
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+
+                <span class="logo-icon">
+                    <img
+                        src="assets/logos/nova-ragdoll.png"
+                        alt="NOVA Labs"
+                    >
+                </span>
+
+                <span class="logo-text">
+                    NOVA Labs
+                </span>
+
+            </div>
+
+            <p>
+                Where Ideas Become Systems.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html#services">
+                Services
+            </a>
+
+            <a href="index.html#projects">
+                Projects
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
 
         <p>
             © 2026 NOVA Labs. All rights reserved.
         </p>
 
-    </footer>
+        <p>
+            Software • AI • Automation
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 

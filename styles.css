@@ -2481,6 +2481,91 @@ border-radius:20px;
     max-width: 100%;
 }
 
+/* =========================
+   PROJECT 001 - Mobile Navbar
+========================= */
+
+.trading-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .trading-navbar {
+        padding: 16px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 300;
+    }
+
+    .trading-navbar .logo img {
+        width: 46px;
+        height: 46px;
+        object-fit: contain;
+    }
+
+    .trading-menu-toggle {
+        display: block;
+        margin-left: auto;
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .trading-navbar .trading-nav {
+        position: static;
+    }
+
+    .trading-navbar .trading-nav-links {
+        display: none !important;
+    }
+
+    .trading-navbar .trading-nav-links.trading-nav-open {
+        display: flex !important;
+        flex-direction: column;
+
+        position: absolute;
+        top: 78px;
+        left: 16px;
+        right: 16px;
+
+        padding: 20px;
+        gap: 0;
+
+        background: rgba(11, 11, 15, 0.96);
+        border: 1px solid rgba(77, 159, 255, 0.20);
+        border-radius: 16px;
+
+        backdrop-filter: blur(18px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+
+        z-index: 400;
+    }
+
+    .trading-navbar .trading-nav-links li {
+        width: 100%;
+    }
+
+    .trading-navbar .trading-nav-links a {
+        display: block;
+        width: 100%;
+        padding: 14px 4px;
+
+        color: #ffffff;
+        font-size: 15px;
+        text-align: left;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .trading-navbar .trading-nav-links li:last-child a {
+        border-bottom: none;
+    }
+}
+
 /* PROJECT STATUS */
 
 .trading-status {

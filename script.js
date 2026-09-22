@@ -30,3 +30,37 @@ if (menuToggle && navLinks) {
     });
 
 }
+
+// =========================
+// Project 001 Mobile Navigation
+// =========================
+
+const tradingMenuToggle = document.querySelector(".trading-menu-toggle");
+const tradingNavLinks = document.querySelector(".trading-nav-links");
+
+if (tradingMenuToggle && tradingNavLinks) {
+
+    tradingMenuToggle.addEventListener("click", () => {
+        tradingNavLinks.classList.toggle("trading-nav-open");
+
+        const isOpen = tradingNavLinks.classList.contains("trading-nav-open");
+
+        tradingMenuToggle.textContent = isOpen ? "✕" : "☰";
+        tradingMenuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+        tradingMenuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    const tradingLinks = tradingNavLinks.querySelectorAll("a");
+
+    tradingLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            tradingNavLinks.classList.remove("trading-nav-open");
+            tradingMenuToggle.textContent = "☰";
+            tradingMenuToggle.setAttribute("aria-label", "Open navigation menu");
+            tradingMenuToggle.setAttribute("aria-expanded", "false");
+        });
+    });
+}
